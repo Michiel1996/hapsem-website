@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basisstijlen — premium medische uitstraling */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-50 text-medical-800 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-medical-900;
+  }
+}
+
+@layer components {
+  /* Herbruikbare container met ruime marges */
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Premium kaartstijl */
+  .card-premium {
+    @apply rounded-2xl border border-medical-100/80 bg-white p-6 shadow-soft transition-all duration-300 hover:shadow-card sm:p-8;
+  }
+
+  /* Sectie-achtergrond met subtiel verloop */
+  .section-gradient {
+    @apply bg-gradient-to-b from-white via-cream-50 to-medical-50/30;
+  }
+
+  /* Animatie bij scroll (via data-visible) */
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll[data-visible="true"] {
+    @apply opacity-100 translate-y-0;
+  }
+}
