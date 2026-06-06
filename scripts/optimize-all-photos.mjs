@@ -60,17 +60,40 @@ if (fs.existsSync(michielSrc)) {
   console.log("✓ Michiel");
 }
 
-// Loïck — headshot, geen agressieve trim
+// Loïck — bron is beperkt in resolutie: max. 2× vergroten, nooit naar 1200px upscalen
 const loickSrc = path.join(ASSETS, "loick-vanwetter-source.png");
 if (fs.existsSync(loickSrc)) {
-  const base = sharp(loickSrc);
-  await resizeProfile(base.clone(), "centre").toFile(
-    path.join(OUT_DIR, "loick-vanwetter.webp")
-  );
-  await resizeThumb(base.clone(), "centre").toFile(
-    path.join(OUT_DIR, "loick-vanwetter-thumb.webp")
-  );
-  console.log("✓ Loïck");
+  const meta = await sharp(loickSrc).metadata();
+  const srcW = meta.width ?? 300;
+  const srcH = meta.height ?? 400;
+  const profileW = Math.min(PROFILE_W, srcW * 2);
+  const profileH = Math.min(PROFILE_H, Math.round(profileW * (5 / 4)));
+  const thumbSize = Math.min(THUMB_SIZE, srcW);
+
+  const lightSharpen = (img) =>
+    img.sharpen({ sigma: 0.4, m1: 0.5, m2: 0.2, x1: 2, y2: 10, y3: 20 });
+
+  const loickProfile = lightSharpen(
+    sharp(loickSrc).resize(profileW, profileH, {
+      fit: "cover",
+      position: "centre",
+      kernel: sharp.kernel.lanczos3,
+      withoutEnlargement: false,
+    })
+  ).webp({ quality: WEBP_QUALITY, effort: 6, smartSubsample: false });
+
+  const loickThumb = lightSharpen(
+    sharp(loickSrc).resize(thumbSize, thumbSize, {
+      fit: "cover",
+      position: "centre",
+      kernel: sharp.kernel.lanczos3,
+      withoutEnlargement: true,
+    })
+  ).webp({ quality: THUMB_QUALITY, effort: 6, smartSubsample: false });
+
+  await loickProfile.toFile(path.join(OUT_DIR, "loick-vanwetter.webp"));
+  await loickThumb.toFile(path.join(OUT_DIR, "loick-vanwetter-thumb.webp"));
+  console.log(`✓ Loïck (${srcW}×${srcH} → profiel ${profileW}×${profileH}, thumb ${thumbSize}px)`);
 }
 
 // Gianni — van bestaande jpg
