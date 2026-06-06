@@ -9,7 +9,7 @@ export function LocationMap() {
       <div className="container-wide">
         <SectionHeading
           title="Locatie"
-          subtitle="Onze tijdelijke praktijklocatie in Semmerzake — vanaf 1 oktober 2027."
+          subtitle="Onze tijdelijke praktijklocatie in Semmerzake — vanaf 1 oktober 2026."
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
@@ -30,7 +30,7 @@ export function LocationMap() {
               </address>
               <p className="mt-4 text-sm text-medical-500">
                 Voormalig consultatieadres ({PRACTICE.formerAddress.full}): geen
-                consultaties meer vanaf 1 oktober 2027.
+                consultaties meer vanaf 1 oktober 2026.
               </p>
               <p className="mt-3 text-sm text-medical-600">{RELOCATION.futureLocation}</p>
               <div className="mt-6">

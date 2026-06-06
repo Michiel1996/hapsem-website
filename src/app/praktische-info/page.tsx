@@ -9,7 +9,7 @@ import { PRACTICE, RELOCATION } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Praktische info",
   description:
-    "Betalingen, voorschriften, huisbezoeken, spoedgevallen, GMD en tarieven. Praktijklocatie Dorpstraat 60, Semmerzake vanaf oktober 2027.",
+    "Betalingen, voorschriften, huisbezoeken, spoedgevallen, GMD en tarieven. Praktijklocatie Dorpstraat 60, Semmerzake vanaf oktober 2026.",
 };
 
 export default function PraktischeInfoPage() {
@@ -27,7 +27,7 @@ export default function PraktischeInfoPage() {
               <p className="font-semibold text-medical-900">Praktijklocatie</p>
               <p className="mt-2">{RELOCATION.notice}</p>
               <p className="mt-3 text-sm">
-                Huidig consultatieadres tot 1 oktober 2027: {PRACTICE.formerAddress.full}.
+                Huidig consultatieadres tot 1 oktober 2026: {PRACTICE.formerAddress.full}.
                 Daarna: <strong>{PRACTICE.address.full}</strong>.
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function PraktischeInfoPage() {
                   >
                     {PRACTICE.phone}
                   </a>{" "}
-                  om dit te bespreken. Dr. Dirk Lauwerier voert vanaf oktober 2027 enkel nog
+                  om dit te bespreken. Dr. Dirk Lauwerier voert vanaf oktober 2026 enkel nog
                   huisbezoeken uit voor zijn bestaande patiënten.
                 </p>
               </InfoCard>
@@ -121,7 +121,7 @@ export default function PraktischeInfoPage() {
             <AnimateOnScroll delay={320}>
               <InfoCard title="Sportgeneeskunde">
                 <p>
-                  Vanaf oktober 2027 bieden wij sportmedische consultaties aan via Dr. Gianni
+                  Vanaf oktober 2026 bieden wij sportmedische consultaties aan via Dr. Gianni
                   Faelens. Zie de pagina Sportgeneeskunde voor inspanningstesten, sportkeuringen,
                   duikmedische keuringen en meer.
                 </p>

@@ -13,7 +13,7 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Ja. U kiest zelf bij welke van onze twee consulterende huisartsen u een afspraak wenst: Dr. Michiel Vercruysse of Dr. Loïck Vanwetter. Alle consulterende artsen kunnen uw medisch dossier raadplegen. Bij dringende problemen kunt u ook terecht bij een collega als uw vaste arts volzet is.",
   },
   {
-    question: "Waar vindt de praktijk plaats vanaf oktober 2027?",
+    question: "Waar vindt de praktijk plaats vanaf oktober 2026?",
     answer: `${RELOCATION.notice} ${RELOCATION.futureLocation}`,
   },
   {

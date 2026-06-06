@@ -9,7 +9,7 @@ import { RelocationBanner } from "@/components/shared/RelocationBanner";
 export const metadata: Metadata = {
   title: "Contact & ligging",
   description:
-    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake — Dorpstraat 60, 9890 Semmerzake. Tijdelijke praktijklocatie vanaf 1 oktober 2027.",
+    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake — Dorpstraat 60, 9890 Semmerzake. Tijdelijke praktijklocatie vanaf 1 oktober 2026.",
   keywords: ["contact huisarts Semmerzake", "Dorpstraat 60", "HAPSEM", "sportarts Semmerzake"],
 };
 
@@ -43,7 +43,7 @@ export default function ContactPage() {
                   </address>
                   <p className="mt-4 text-sm text-medical-500">
                     Voormalig consultatieadres: {PRACTICE.formerAddress.full}. Geen
-                    consultaties meer vanaf 1 oktober 2027.
+                    consultaties meer vanaf 1 oktober 2026.
                   </p>
                   <Button href={MAP_LINK} external variant="outline" className="mt-6">
                     Route in Google Maps

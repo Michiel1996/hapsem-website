@@ -4,9 +4,9 @@
  */
 
 export const RELOCATION = {
-  date: "1 oktober 2027",
+  date: "1 oktober 2026",
   notice:
-    "Vanaf 1 oktober 2027 verhuist onze praktijk tijdelijk naar Dorpstraat 60 te Semmerzake. Tijdens deze overgangsperiode zullen alle consultaties op deze locatie plaatsvinden. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23.",
+    "Vanaf 1 oktober 2026 verhuist onze praktijk tijdelijk naar Dorpstraat 60 te Semmerzake. Tijdens deze overgangsperiode zullen alle consultaties op deze locatie plaatsvinden. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23.",
   futureLocation:
     "De praktijk zal op termijn haar definitieve intrek nemen in de volledig vernieuwde site van Schoenen Fami. Tot de renovatie- en verbouwingswerken volledig zijn afgerond, verwelkomen wij u in onze tijdelijke praktijklocatie te Dorpstraat 60 in Semmerzake.",
 } as const;
@@ -20,9 +20,9 @@ export const PRACTICE = {
     postal: "9890 Semmerzake",
     country: "België",
     full: "Dorpstraat 60, 9890 Semmerzake, België",
-    label: "Tijdelijke praktijklocatie (vanaf 1 oktober 2027)",
+    label: "Tijdelijke praktijklocatie (vanaf 1 oktober 2026)",
   },
-  /** Voormalig consultatieadres — geen consultaties meer vanaf 1 oktober 2027 */
+  /** Voormalig consultatieadres — geen consultaties meer vanaf 1 oktober 2026 */
   formerAddress: {
     street: "Opperweg 23",
     postal: "9890 Gavere",
@@ -109,22 +109,22 @@ export const CONSULTING_DOCTORS: ConsultingDoctor[] = [
 /** @deprecated Gebruik CONSULTING_DOCTORS — behouden voor backwards compatibility */
 export const DOCTORS = CONSULTING_DOCTORS;
 
-/** Dr. Dirk Lauwerier — geen consultaties meer vanaf oktober 2027 */
+/** Dr. Dirk Lauwerier — geen consultaties meer vanaf oktober 2026 */
 export const FORMER_CONSULTING_DOCTOR = {
   name: "Dr. Dirk Lauwerier",
   role: "Huisbezoeken (bestaande patiënten)",
   note:
-    "Dr. Dirk Lauwerier voert vanaf oktober 2027 enkel nog huisbezoeken uit voor zijn bestaande patiënten en houdt geen consultaties meer in de praktijk.",
+    "Dr. Dirk Lauwerier voert vanaf oktober 2026 enkel nog huisbezoeken uit voor zijn bestaande patiënten en houdt geen consultaties meer in de praktijk.",
 } as const;
 
-/** Sportarts — vanaf 1 oktober 2027 */
+/** Sportarts — vanaf 1 oktober 2026 */
 export const SPORT_DOCTOR = {
   name: "Dr. Gianni Faelens",
   role: "Sportarts · Keuringsarts · Duikarts",
   image: "/images/gianni-faelens.jpg",
   imageCredit: "Foto: HERO Edegem",
   intro:
-    "Vanaf 1 oktober 2027 vervoegt Dr. Gianni Faelens onze praktijk als sportarts, keuringsarts en duikarts.",
+    "Vanaf 1 oktober 2026 vervoegt Dr. Gianni Faelens onze praktijk als sportarts, keuringsarts en duikarts.",
   description:
     "Dr. Faelens is sportarts, keuringsarts en duikarts. Binnen onze praktijk richt hij zich op sportgeneeskunde, blessurepreventie, sportmedische keuringen en de begeleiding van zowel recreatieve als competitieve sporters.",
   disclaimer:

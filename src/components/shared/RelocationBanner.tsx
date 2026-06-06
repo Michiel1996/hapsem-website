@@ -6,7 +6,7 @@ interface RelocationBannerProps {
   className?: string;
 }
 
-/** Opvallende melding over de verhuis vanaf 1 oktober 2027 */
+/** Opvallende melding over de verhuis vanaf 1 oktober 2026 */
 export function RelocationBanner({
   showFutureLocation = false,
   className = "",

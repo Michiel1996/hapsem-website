@@ -56,7 +56,7 @@ export default function TeamPage() {
 
           <SectionHeading
             title="Sportgeneeskunde"
-            subtitle="Vanaf 1 oktober 2027 — sportmedische begeleiding binnen onze praktijk."
+            subtitle="Vanaf 1 oktober 2026 — sportmedische begeleiding binnen onze praktijk."
             className="mt-20"
           />
 

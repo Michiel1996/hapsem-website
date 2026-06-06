@@ -10,7 +10,7 @@ import { RELOCATION, PRACTICE, SPORT_DOCTOR } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Over de praktijk",
   description:
-    "Leer Huisartsenpraktijk Semmerzake (HAPSEM) kennen. Twee vaste huisartsen, sportgeneeskunde, geen patiëntenstop. Tijdelijke locatie Dorpstraat 60 vanaf oktober 2027.",
+    "Leer Huisartsenpraktijk Semmerzake (HAPSEM) kennen. Twee vaste huisartsen, sportgeneeskunde, geen patiëntenstop. Tijdelijke locatie Dorpstraat 60 vanaf oktober 2026.",
 };
 
 export default function OverDePraktijkPage() {
@@ -35,7 +35,7 @@ export default function OverDePraktijkPage() {
                 bij de collega.
               </p>
               <p className="mt-4">
-                Vanaf oktober 2027 vervoegt {SPORT_DOCTOR.name} onze praktijk als
+                Vanaf oktober 2026 vervoegt {SPORT_DOCTOR.name} onze praktijk als
                 sportarts. {SPORT_DOCTOR.disclaimer}
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function OverDePraktijkPage() {
             <AnimateOnScroll delay={250}>
               <InfoCard title="Praktijklocatie">
                 <p>
-                  Vanaf 1 oktober 2027 verwelkomen wij u op{" "}
+                  Vanaf 1 oktober 2026 verwelkomen wij u op{" "}
                   <strong>
                     {PRACTICE.address.street}, {PRACTICE.address.postal}
                   </strong>
