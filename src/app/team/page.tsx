@@ -66,7 +66,7 @@ export default function TeamPage() {
                 name={SPORT_DOCTOR.name}
                 role={SPORT_DOCTOR.role}
                 description={`${SPORT_DOCTOR.intro} ${SPORT_DOCTOR.description}`}
-                image={SPORT_DOCTOR.image}
+                image={SPORT_DOCTOR.imageThumb}
                 imageCredit={SPORT_DOCTOR.imageCredit}
                 variant="sport"
               >

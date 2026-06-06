@@ -29,8 +29,9 @@ export function DoctorProfileFeatured({
             alt={imageAlt}
             fill
             priority
+            quality={95}
             className="object-cover object-top"
-            sizes="(max-width: 1024px) 100vw, 40vw"
+            sizes="(max-width: 1024px) 100vw, 600px"
           />
           <div
             className="pointer-events-none absolute inset-0 bg-gradient-to-t from-medical-900/10 via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-white/20"

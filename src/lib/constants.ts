@@ -123,7 +123,8 @@ export const FORMER_CONSULTING_DOCTOR = {
 export const SPORT_DOCTOR = {
   name: "Dr. Gianni Faelens",
   role: "Sportarts · Keuringsarts · Duikarts",
-  image: "/images/gianni-faelens.jpg",
+  image: "/images/gianni-faelens.webp",
+  imageThumb: "/images/gianni-faelens-thumb.webp",
   imageCredit: "Foto: HERO Edegem",
   intro:
     "Vanaf 1 oktober 2026 vervoegt Dr. Gianni Faelens onze praktijk als sportarts, keuringsarts en duikarts.",

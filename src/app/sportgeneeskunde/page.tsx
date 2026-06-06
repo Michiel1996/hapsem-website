@@ -43,8 +43,9 @@ export default function SportgeneeskundePage() {
                   src={SPORT_DOCTOR.image}
                   alt={SPORT_DOCTOR.name}
                   fill
+                  quality={95}
                   className="object-cover object-top"
-                  sizes="(max-width: 1024px) 100vw, 400px"
+                  sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
               </div>

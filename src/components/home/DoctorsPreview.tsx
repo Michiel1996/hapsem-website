@@ -23,8 +23,9 @@ export function DoctorsPreview() {
                       src={doctor.image}
                       alt={doctor.imageAlt ?? doctor.name}
                       fill
+                      quality={95}
                       className="object-cover object-top"
-                      sizes="80px"
+                      sizes="160px"
                     />
                   </div>
                 ) : (
@@ -49,11 +50,12 @@ export function DoctorsPreview() {
             <article className="card-premium group h-full text-center">
               <div className="relative mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full ring-2 ring-gold-400/40">
                 <Image
-                  src={SPORT_DOCTOR.image}
+                  src={SPORT_DOCTOR.imageThumb}
                   alt={SPORT_DOCTOR.name}
                   fill
+                  quality={95}
                   className="object-cover object-top"
-                  sizes="80px"
+                  sizes="160px"
                 />
               </div>
               <h3 className="text-xl font-semibold text-medical-900">

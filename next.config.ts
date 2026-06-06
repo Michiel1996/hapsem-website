@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* SEO-vriendelijke statische optimalisaties */
+  images: {
+    formats: ["image/webp"],
+    qualities: [75, 90, 95],
+  },
 };
 
 export default nextConfig;

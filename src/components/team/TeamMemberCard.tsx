@@ -39,8 +39,9 @@ export function TeamMemberCard({
             src={image}
             alt={imageAlt ?? name}
             fill
+            quality={95}
             className="object-cover object-top"
-            sizes="112px"
+            sizes="224px"
           />
         </div>
       ) : (
