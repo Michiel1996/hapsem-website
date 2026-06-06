@@ -1,7 +1,7 @@
 import { RELOCATION } from "@/lib/constants";
 
 interface RelocationBannerProps {
-  /** Toon ook de toekomstige locatie (Schoenen Fami) */
+  /** Toon ook info over toekomstige uitbreiding (Schoenen Fami) */
   showFutureLocation?: boolean;
   className?: string;
 }

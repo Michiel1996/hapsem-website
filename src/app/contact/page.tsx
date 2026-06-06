@@ -9,7 +9,7 @@ import { RelocationBanner } from "@/components/shared/RelocationBanner";
 export const metadata: Metadata = {
   title: "Contact & ligging",
   description:
-    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake — Dorpstraat 60, 9890 Semmerzake. Tijdelijke praktijklocatie vanaf 1 oktober 2026.",
+    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake — Dorpstraat 60, 9890 Semmerzake. Nieuwe praktijklocatie vanaf 1 oktober 2026.",
   keywords: ["contact huisarts Semmerzake", "Dorpstraat 60", "HAPSEM", "sportarts Semmerzake"],
 };
 
@@ -80,7 +80,7 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={140}>
                 <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-5 text-sm text-medical-700 leading-relaxed">
-                  <p className="font-semibold text-medical-900">Toekomstige locatie</p>
+                  <p className="font-semibold text-medical-900">Toekomstige uitbreiding</p>
                   <p className="mt-2">{RELOCATION.futureLocation}</p>
                 </div>
               </AnimateOnScroll>

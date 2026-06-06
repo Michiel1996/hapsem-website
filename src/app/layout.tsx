@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: `%s | ${PRACTICE.shortName}`,
   },
   description:
-    "Huisartsenpraktijk Semmerzake (HAPSEM). Twee vaste huisartsen, sportgeneeskunde met Dr. Gianni Faelens, online afspraken via Medici. Tijdelijke locatie Dorpstraat 60, Semmerzake.",
+    "Huisartsenpraktijk Semmerzake (HAPSEM). Twee vaste huisartsen, sportgeneeskunde met Dr. Gianni Faelens, online afspraken via Medici. Praktijklocatie Dorpstraat 60, Semmerzake vanaf oktober 2026.",
   keywords: [...SEO_KEYWORDS],
   openGraph: {
     title: PRACTICE.name,

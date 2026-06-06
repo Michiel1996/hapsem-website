@@ -28,7 +28,8 @@ export default function PraktischeInfoPage() {
               <p className="mt-2">{RELOCATION.notice}</p>
               <p className="mt-3 text-sm">
                 Huidig consultatieadres tot 1 oktober 2026: {PRACTICE.formerAddress.full}.
-                Daarna: <strong>{PRACTICE.address.full}</strong>.
+                Vanaf 1 oktober 2026: <strong>{PRACTICE.address.full}</strong> — alle
+                consultaties vinden daar plaats.
               </p>
             </div>
           </AnimateOnScroll>

@@ -6,9 +6,11 @@
 export const RELOCATION = {
   date: "1 oktober 2026",
   notice:
-    "Vanaf 1 oktober 2026 verhuist onze praktijk tijdelijk naar Dorpstraat 60 te Semmerzake. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23.",
+    "Vanaf 1 oktober 2026 verhuist onze praktijk naar Dorpstraat 60 te Semmerzake. Alle consultaties vinden vanaf die datum plaats op deze locatie. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23.",
   futureLocation:
-    "De praktijk zal op termijn haar definitieve intrek nemen in de volledig vernieuwde site van Schoenen Fami. Tot de renovatie- en verbouwingswerken volledig zijn afgerond, verwelkomen wij u in onze tijdelijke praktijklocatie te Dorpstraat 60 in Semmerzake.",
+    "In de toekomst zal onze praktijk verder uitbreiden in de volledig vernieuwde site van Schoenen Fami.",
+  welcomeAtNewLocation:
+    "Vanaf 1 oktober 2026 verwelkomen wij u op onze nieuwe praktijklocatie",
 } as const;
 
 export const PRACTICE = {
@@ -20,7 +22,7 @@ export const PRACTICE = {
     postal: "9890 Semmerzake",
     country: "België",
     full: "Dorpstraat 60, 9890 Semmerzake, België",
-    label: "Tijdelijke praktijklocatie (vanaf 1 oktober 2026)",
+    label: "Nieuwe praktijklocatie vanaf 1 oktober 2026",
   },
   /** Voormalig consultatieadres — geen consultaties meer vanaf 1 oktober 2026 */
   formerAddress: {
