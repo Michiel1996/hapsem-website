@@ -1,4 +1,3 @@
-import { PRACTICE } from "@/lib/constants";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 /** Welkomstsectie — direct onder de hero op de homepagina */
@@ -12,7 +11,7 @@ export function WelcomeSection() {
               Welkom
             </p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-medical-900 sm:text-4xl md:text-5xl">
-              Welkom bij {PRACTICE.name}
+              Uw huisarts in Semmerzake en Gavere
             </h2>
             <div
               className="mx-auto mt-5 h-1 w-16 rounded-full bg-gradient-to-r from-medical-400 to-gold-400"

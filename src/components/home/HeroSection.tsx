@@ -19,7 +19,7 @@ export function HeroSection() {
 
         <div className="container-wide relative flex min-h-[85vh] flex-col items-center justify-center py-20 text-center">
           <span className="mb-4 inline-block rounded-full border border-medical-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-medical-600 shadow-soft">
-            Geen patiëntenstop · Nieuwe patiënten welkom
+            Nieuwe patiënten welkom
           </span>
 
           <h1 className="max-w-4xl font-display text-4xl font-semibold leading-tight tracking-tight text-medical-900 sm:text-5xl md:text-6xl lg:text-7xl">

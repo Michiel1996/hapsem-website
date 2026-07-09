@@ -1,6 +1,5 @@
 import { PRACTICE, MEDICI_APPOINTMENT_URL } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { AppointmentButton } from "@/components/ui/AppointmentButton";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 /** Snelle contactknoppen — telefoon, e-mail, afspraak */
@@ -55,9 +54,6 @@ export function QuickContact() {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <AppointmentButton size="lg" label="Boek consultatie" />
-        </div>
       </div>
     </section>
   );

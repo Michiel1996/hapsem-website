@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { PRACTICE, OPENING_HOURS, MAP_EMBED_URL, MAP_LINK, RELOCATION } from "@/lib/constants";
+import { PRACTICE, OPENING_HOURS, MAP_EMBED_URL, MAP_LINK } from "@/lib/constants";
 import { AppointmentButton } from "@/components/ui/AppointmentButton";
 import { Button } from "@/components/ui/Button";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
@@ -75,13 +75,6 @@ export default function ContactPage() {
                   >
                     {PRACTICE.email}
                   </a>
-                </div>
-              </AnimateOnScroll>
-
-              <AnimateOnScroll delay={140}>
-                <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-5 text-sm text-medical-700 leading-relaxed">
-                  <p className="font-semibold text-medical-900">Toekomstige uitbreiding</p>
-                  <p className="mt-2">{RELOCATION.futureLocation}</p>
                 </div>
               </AnimateOnScroll>
 

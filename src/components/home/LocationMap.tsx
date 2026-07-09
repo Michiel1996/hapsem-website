@@ -1,4 +1,4 @@
-import { MAP_EMBED_URL, MAP_LINK, PRACTICE, RELOCATION } from "@/lib/constants";
+import { MAP_EMBED_URL, MAP_LINK, PRACTICE } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
@@ -28,11 +28,6 @@ export function LocationMap() {
                 <br />
                 {PRACTICE.address.country}
               </address>
-              <p className="mt-4 text-sm text-medical-500">
-                Voormalig consultatieadres ({PRACTICE.formerAddress.full}): geen
-                consultaties meer vanaf 1 oktober 2026.
-              </p>
-              <p className="mt-3 text-sm text-medical-600">{RELOCATION.futureLocation}</p>
               <div className="mt-6">
                 <Button href={MAP_LINK} external variant="outline">
                   Route plannen in Google Maps
