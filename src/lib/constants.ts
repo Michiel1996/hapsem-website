@@ -135,7 +135,7 @@ export const SPORT_DOCTOR = {
   intro:
     "Vanaf 1 oktober 2026 vervoegt Dr. Gianni Faelens onze praktijk als sportarts, keuringsarts en duikarts.",
   description:
-    "Dr. Faelens is sportarts, keuringsarts en duikarts. Binnen onze praktijk richt hij zich op sportgeneeskunde, blessurepreventie, sportmedische keuringen en de begeleiding van zowel recreatieve als competitieve sporters.",
+    "Binnen onze praktijk richt hij zich op sportgeneeskunde, blessurepreventie, sportmedische keuringen en de begeleiding van zowel recreatieve als competitieve sporters.",
   disclaimer:
     "Dr. Faelens voert binnen onze praktijk geen consultaties algemene huisartsgeneeskunde uit.",
   services: [
@@ -173,6 +173,24 @@ export const OPENING_HOURS = [
   { day: "Zondag", hours: "Gesloten" },
 ] as const;
 
+/** Hoofdnavigatie desktop — kernpagina's op topniveau */
+export const NAV_PRIMARY = [
+  { href: "/", label: "Home" },
+  { href: "/over-de-praktijk", label: "Over de praktijk" },
+  { href: "/team", label: "Team" },
+  { href: "/sportgeneeskunde", label: "Sportgeneeskunde" },
+] as const;
+
+/** Servicepagina's — gegroepeerd onder "Voor patiënten" in de desktopnavigatie */
+export const NAV_PATIENT_MENU = [
+  { href: "/praktische-info", label: "Praktische info" },
+  { href: "/videoconsultaties", label: "Videoconsultaties" },
+  { href: "/wachtdienst", label: "Wachtdienst" },
+  { href: "/helena", label: "Helena laboresultaten" },
+  { href: "/faq", label: "Veelgestelde vragen" },
+] as const;
+
+/** Volledige lijst — gebruikt in footer en mobiel menu */
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/over-de-praktijk", label: "Over de praktijk" },

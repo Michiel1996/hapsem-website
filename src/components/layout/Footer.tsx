@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAV_LINKS, PRACTICE, MEDICI_APPOINTMENT_URL } from "@/lib/constants";
+import { Logo } from "@/components/layout/Logo";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,11 +10,8 @@ export function Footer() {
       <div className="container-wide py-12 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="font-display text-xl font-semibold text-white">
-              {PRACTICE.shortName}
-            </h3>
-            <p className="mt-2 text-sm text-medical-200">{PRACTICE.name}</p>
-            <p className="mt-1 text-xs text-medical-300">
+            <Logo variant="light" />
+            <p className="mt-3 text-xs text-medical-300">
               {PRACTICE.address.label}
             </p>
             <address className="mt-4 not-italic text-sm leading-relaxed text-medical-200">
@@ -27,7 +25,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold text-white">Navigatie</h4>
-            <ul className="mt-4 space-y-2">
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
