@@ -190,13 +190,15 @@ export const NAV_LINKS = [
 ] as const;
 
 export const SEO_KEYWORDS = [
-  "huisarts",
-  "Semmerzake",
+  "huisarts Semmerzake",
+  "huisarts Gavere",
+  "huisartsenpraktijk Semmerzake",
+  "huisartsenpraktijk Gavere",
   "HAPSEM",
-  "huisartsenpraktijk",
-  "afspraak",
+  "afspraak huisarts",
   "videoconsultatie",
   "sportarts Semmerzake",
+  "sportarts Gavere",
   "sportgeneeskunde Semmerzake",
   "sportkeuring",
   "duikarts",

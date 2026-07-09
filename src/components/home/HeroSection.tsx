@@ -28,8 +28,9 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-lg text-medical-600 sm:text-xl">
-            {PRACTICE.name} — twee vaste huisartsen, sportgeneeskunde en een
-            toegewijd team. Online afspraken, videoconsultaties en zorg op maat.
+            {PRACTICE.name} — uw huisarts in Semmerzake (Gavere). Twee vaste
+            huisartsen, sportgeneeskunde en een toegewijd team. Online
+            afspraken, videoconsultaties en zorg op maat.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">

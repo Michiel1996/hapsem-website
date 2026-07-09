@@ -9,8 +9,8 @@ import { RelocationBanner } from "@/components/shared/RelocationBanner";
 export const metadata: Metadata = {
   title: "Contact & ligging",
   description:
-    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake — Dorpstraat 60, 9890 Semmerzake. Nieuwe praktijklocatie vanaf 1 oktober 2026.",
-  keywords: ["contact huisarts Semmerzake", "Dorpstraat 60", "HAPSEM", "sportarts Semmerzake"],
+    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake (Gavere) — Dorpstraat 60, 9890 Semmerzake. Telefoon 09 384 48 70, online afspraken via Medici.",
+  keywords: ["contact huisarts Semmerzake", "huisarts Gavere", "Dorpstraat 60", "HAPSEM"],
 };
 
 export default function ContactPage() {

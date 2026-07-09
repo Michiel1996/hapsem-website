@@ -17,9 +17,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Team & artsen",
   description:
-    "Maak kennis met Dr. Michiel Vercruysse, Dr. Loïck Vanwetter, Dr. Gianni Faelens (sportarts) en Audrey Vanwetter (diëtiste). Huisartsenpraktijk Semmerzake.",
+    "Maak kennis met Dr. Michiel Vercruysse, Dr. Loïck Vanwetter, Dr. Gianni Faelens (sportarts) en Audrey Vanwetter (diëtiste). Huisartsenpraktijk Semmerzake (Gavere).",
   keywords: [
     "huisarts Semmerzake",
+    "huisarts Gavere",
     "Dr. Michiel Vercruysse",
     "Dr. Loïck Vanwetter",
     "sportarts Semmerzake",

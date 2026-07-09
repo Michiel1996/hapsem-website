@@ -11,9 +11,10 @@ import { InfoCard } from "@/components/shared/InfoCard";
 export const metadata: Metadata = {
   title: "Sportgeneeskunde",
   description:
-    "Sportarts Dr. Gianni Faelens bij HAPSEM Semmerzake. Sportkeuring, duikarts, inspanningstest, sportletsels, echografie en blessurepreventie. Vanaf 1 oktober 2026, Dorpstraat 60.",
+    "Sportarts Dr. Gianni Faelens bij HAPSEM Semmerzake (regio Gavere–Gent). Sportkeuring, duikarts, inspanningstest, sportletsels, echografie en blessurepreventie. Vanaf 1 oktober 2026.",
   keywords: [
     "sportarts Semmerzake",
+    "sportarts Gavere",
     "sportgeneeskunde Semmerzake",
     "sportkeuring",
     "duikarts",
