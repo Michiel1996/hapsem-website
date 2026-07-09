@@ -37,6 +37,15 @@ export const PRACTICE = {
   emailHref: "mailto:info@hapsem.be",
 } as const;
 
+/** Productiedomein — gebruikt voor canonical URLs, sitemap en structured data */
+export const SITE_URL = "https://hapsem.be";
+
+/** GPS-coördinaten Dorpstraat 60, 9890 Semmerzake (centrum Semmerzake) */
+export const PRACTICE_GEO = {
+  latitude: 50.94278,
+  longitude: 3.66306,
+} as const;
+
 /** Medici — officiële link voor alle online afspraken */
 export const MEDICI_APPOINTMENT_URL =
   "https://www.mtc-it4.be/patient/index.html#/appointments/day/bjNkcWkyQmFRMkpDVTRFNndleFgzTEg2UjB3RDlUcm5GS2RxUEpDcUtPZW9BSXJoMWVvNFJzakxua202b1YwaQ==";

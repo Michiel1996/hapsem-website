@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/shared/JsonLd";
-import { PRACTICE, SEO_KEYWORDS } from "@/lib/constants";
+import { PRACTICE, SEO_KEYWORDS, SITE_URL } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,16 +19,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: `${PRACTICE.shortName} | ${PRACTICE.name}`,
+    default: `${PRACTICE.name} (${PRACTICE.shortName}) | Huisarts Semmerzake & Gavere`,
     template: `%s | ${PRACTICE.shortName}`,
   },
   description:
-    "Huisartsenpraktijk Semmerzake (HAPSEM). Twee vaste huisartsen, sportgeneeskunde met Dr. Gianni Faelens, online afspraken via Medici. Praktijklocatie Dorpstraat 60, Semmerzake vanaf oktober 2026.",
+    "Huisartsenpraktijk Semmerzake (HAPSEM) — huisarts in Semmerzake en Gavere. Twee vaste huisartsen, sportgeneeskunde met Dr. Gianni Faelens, online afspraken via Medici. Dorpstraat 60, Semmerzake vanaf oktober 2026.",
   keywords: [...SEO_KEYWORDS],
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: PRACTICE.name,
+    title: `${PRACTICE.name} (${PRACTICE.shortName})`,
     description: PRACTICE.tagline,
+    url: SITE_URL,
+    siteName: PRACTICE.name,
     locale: "nl_BE",
     type: "website",
   },
