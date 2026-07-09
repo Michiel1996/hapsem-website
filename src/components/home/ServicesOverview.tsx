@@ -12,6 +12,12 @@ export function ServicesOverview() {
       external: true,
     },
     {
+      title: "Team & artsen",
+      description:
+        "Maak kennis met onze huisartsen, sportarts en diëtiste.",
+      href: "/team",
+    },
+    {
       title: "Sportgeneeskunde",
       description:
         "Sportmedische keuringen, inspanningstesten, sportletsels en blessurepreventie.",
@@ -52,7 +58,7 @@ export function ServicesOverview() {
           subtitle="Alles wat u nodig heeft voor uw gezondheid, overzichtelijk op één plek."
         />
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <AnimateOnScroll key={service.title} delay={index * 60}>
               {service.external ? (

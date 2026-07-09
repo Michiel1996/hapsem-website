@@ -1,4 +1,5 @@
-import { RELOCATION } from "@/lib/constants";
+import Link from "next/link";
+import { PRACTICE, RELOCATION } from "@/lib/constants";
 
 interface RelocationBannerProps {
   /** Toon ook info over toekomstige uitbreiding (Schoenen Fami) */
@@ -16,7 +17,21 @@ export function RelocationBanner({
       role="note"
       className={`border-b border-amber-200 bg-gradient-to-r from-amber-50 via-amber-50/90 to-medical-50 px-4 py-4 sm:px-6 ${className}`}
     >
-      <div className="container-wide flex gap-3">
+      {/* Compacte variant — mobiel */}
+      <div className="container-wide sm:hidden">
+        <p className="text-sm leading-snug text-medical-800">
+          <span className="font-semibold text-medical-900">
+            Vanaf {RELOCATION.date}:
+          </span>{" "}
+          {PRACTICE.address.street}, Semmerzake ·{" "}
+          <Link href="/contact" className="font-medium text-medical-700 underline">
+            meer info
+          </Link>
+        </p>
+      </div>
+
+      {/* Volledige variant — vanaf tablet */}
+      <div className="container-wide hidden gap-3 sm:flex">
         <span className="mt-0.5 shrink-0 text-amber-600" aria-hidden>
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path
