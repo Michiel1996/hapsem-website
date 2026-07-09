@@ -48,9 +48,15 @@ export default function RootLayout({
   return (
     <html lang="nl" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col font-sans">
+        <a
+          href="#inhoud"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-medical-700 focus:px-4 focus:py-2 focus:text-white"
+        >
+          Ga naar inhoud
+        </a>
         <JsonLd />
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="inhoud" className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

@@ -117,9 +117,6 @@ export const CONSULTING_DOCTORS: ConsultingDoctor[] = [
   },
 ];
 
-/** @deprecated Gebruik CONSULTING_DOCTORS — behouden voor backwards compatibility */
-export const DOCTORS = CONSULTING_DOCTORS;
-
 /** Dr. Dirk Lauwerier — geen consultaties meer vanaf oktober 2026 */
 export const FORMER_CONSULTING_DOCTOR = {
   name: "Dr. Dirk Lauwerier",

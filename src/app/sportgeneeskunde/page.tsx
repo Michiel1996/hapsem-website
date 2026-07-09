@@ -50,7 +50,7 @@ export default function SportgeneeskundePage() {
                   priority
                 />
               </div>
-              <p className="mt-3 text-center text-xs text-medical-400">
+              <p className="mt-3 text-center text-xs text-medical-500">
                 {SPORT_DOCTOR.imageCredit}
               </p>
             </AnimateOnScroll>

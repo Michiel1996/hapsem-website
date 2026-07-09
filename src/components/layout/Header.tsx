@@ -15,7 +15,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-medical-100/60 bg-white/90 backdrop-blur-md">
-      <div className="container-wide flex h-18 items-center justify-between py-4">
+      <div className="container-wide flex items-center justify-between py-4">
         {/* Logo / praktijknaam */}
         <Link href="/" className="group flex flex-col">
           <span className="font-display text-xl font-semibold text-medical-800 transition-colors group-hover:text-medical-600 sm:text-2xl">

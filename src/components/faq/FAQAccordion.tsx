@@ -19,6 +19,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
     <div className="mx-auto max-w-3xl space-y-3">
       {items.map((item, index) => {
         const isOpen = openIndex === index;
+        const panelId = `faq-panel-${index}`;
         return (
           <div
             key={item.question}
@@ -29,6 +30,7 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-medium text-medical-900 hover:bg-medical-50/50 transition-colors"
               onClick={() => setOpenIndex(isOpen ? null : index)}
               aria-expanded={isOpen}
+              aria-controls={panelId}
             >
               {item.question}
               <span
@@ -39,11 +41,13 @@ export function FAQAccordion({ items }: FAQAccordionProps) {
                 </svg>
               </span>
             </button>
-            {isOpen && (
-              <div className="border-t border-medical-100 px-6 py-5 text-medical-600 leading-relaxed">
-                {item.answer}
-              </div>
-            )}
+            <div
+              id={panelId}
+              hidden={!isOpen}
+              className="border-t border-medical-100 px-6 py-5 text-medical-600 leading-relaxed"
+            >
+              {item.answer}
+            </div>
           </div>
         );
       })}

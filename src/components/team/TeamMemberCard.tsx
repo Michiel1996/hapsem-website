@@ -62,7 +62,7 @@ export function TeamMemberCard({
       {children}
 
       {imageCredit && (
-        <p className="mt-4 text-xs text-medical-400">{imageCredit}</p>
+        <p className="mt-4 text-xs text-medical-500">{imageCredit}</p>
       )}
     </article>
   );

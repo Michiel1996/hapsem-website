@@ -73,7 +73,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-medical-700 pt-8 text-center text-sm text-medical-400">
+        <div className="mt-12 border-t border-medical-700 pt-8 text-center text-sm text-medical-300">
           © {currentYear} {PRACTICE.name}. Alle rechten voorbehouden.
         </div>
       </div>

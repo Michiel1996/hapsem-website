@@ -13,7 +13,7 @@ export function RelocationBanner({
 }: RelocationBannerProps) {
   return (
     <div
-      role="alert"
+      role="note"
       className={`border-b border-amber-200 bg-gradient-to-r from-amber-50 via-amber-50/90 to-medical-50 px-4 py-4 sm:px-6 ${className}`}
     >
       <div className="container-wide flex gap-3">

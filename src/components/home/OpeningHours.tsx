@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { OPENING_HOURS, PRACTICE } from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
@@ -26,7 +27,7 @@ export function OpeningHours() {
                   <span
                     className={
                       item.hours === "Gesloten"
-                        ? "text-medical-400"
+                        ? "text-medical-500"
                         : "text-medical-600"
                     }
                   >
@@ -37,9 +38,9 @@ export function OpeningHours() {
             </ul>
             <p className="mt-6 text-center text-sm text-medical-500">
               Voor dringende gevallen buiten de spreekuren: zie{" "}
-              <a href="/wachtdienst" className="text-medical-600 underline hover:text-medical-800">
+              <Link href="/wachtdienst" className="text-medical-600 underline hover:text-medical-800">
                 wachtdienst
-              </a>
+              </Link>
             </p>
           </div>
         </AnimateOnScroll>
