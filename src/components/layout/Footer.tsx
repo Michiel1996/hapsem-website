@@ -74,7 +74,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-medical-700 pt-8 text-center text-sm text-medical-300">
-          © {currentYear} {PRACTICE.name}. Alle rechten voorbehouden.
+          © {currentYear} {PRACTICE.name}. Alle rechten voorbehouden. ·{" "}
+          <Link href="/privacy" className="transition-colors hover:text-white underline">
+            Privacyverklaring
+          </Link>
         </div>
       </div>
     </footer>

@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/helena", priority: 0.5 },
     { path: "/faq", priority: 0.6 },
     { path: "/contact", priority: 0.9 },
+    { path: "/privacy", priority: 0.3 },
   ];
 
   return routes.map(({ path, priority }) => ({
