@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { PRACTICE } from "@/lib/constants";
+import { PRACTICE, SITE_URL } from "@/lib/constants";
 
 export const alt = `${PRACTICE.name} (${PRACTICE.shortName})`;
 export const size = { width: 1200, height: 630 };
@@ -7,6 +7,8 @@ export const contentType = "image/png";
 
 /** Open Graph-afbeelding voor gedeelde links (WhatsApp, Facebook, …) */
 export default function OpengraphImage() {
+  const domain = SITE_URL.replace(/^https?:\/\//, "");
+
   return new ImageResponse(
     (
       <div
@@ -18,37 +20,37 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           background: "linear-gradient(135deg, #f4f9fc 0%, #ffffff 55%, #e8f2f8 100%)",
-          fontFamily: "Georgia, serif",
+          fontFamily: "system-ui, sans-serif",
         }}
       >
         <div
           style={{
             display: "flex",
-            fontSize: 96,
+            fontSize: 88,
             fontWeight: 700,
-            color: "#233a48",
-            letterSpacing: -2,
+            letterSpacing: -1,
           }}
         >
-          {PRACTICE.shortName}
+          <span style={{ color: "#002D5A" }}>HAP</span>
+          <span style={{ color: "#5BA3D9" }}>SEM</span>
         </div>
         <div
           style={{
             marginTop: 8,
             width: 120,
-            height: 8,
-            borderRadius: 4,
-            background: "#c9a962",
+            height: 6,
+            borderRadius: 3,
+            background: "#5BA3D9",
           }}
         />
-        <div style={{ display: "flex", marginTop: 28, fontSize: 44, color: "#2f5568" }}>
+        <div style={{ display: "flex", marginTop: 28, fontSize: 40, color: "#002D5A" }}>
           {PRACTICE.name}
         </div>
-        <div style={{ display: "flex", marginTop: 20, fontSize: 30, color: "#4a849f" }}>
+        <div style={{ display: "flex", marginTop: 18, fontSize: 28, color: "#3a6a82" }}>
           Huisarts in Semmerzake (Gavere) · Sportgeneeskunde
         </div>
-        <div style={{ display: "flex", marginTop: 44, fontSize: 26, color: "#6fa3be" }}>
-          {`hapsem.be · ${PRACTICE.address.full}`}
+        <div style={{ display: "flex", marginTop: 40, fontSize: 24, color: "#6fa3be" }}>
+          {`${domain} · ${PRACTICE.address.full}`}
         </div>
       </div>
     ),

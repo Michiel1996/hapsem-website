@@ -19,7 +19,7 @@ export function JsonLd() {
     url: SITE_URL,
     telephone: "+32 9 384 48 70",
     email: PRACTICE.email,
-    image: `${SITE_URL}/opengraph-image`,
+    image: `${SITE_URL}/images/logo-hapsem-seal.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: PRACTICE.address.street,
