@@ -33,8 +33,8 @@ export const PRACTICE = {
   },
   phone: "09 384 48 70",
   phoneHref: "tel:+3293844870",
-  email: "info@hapsem.be",
-  emailHref: "mailto:info@hapsem.be",
+  email: "info@huisartsenpraktijksemmerzake.be",
+  emailHref: "mailto:info@huisartsenpraktijksemmerzake.be",
 } as const;
 
 /** Productiedomein — gebruikt voor canonical URLs, sitemap en structured data */
