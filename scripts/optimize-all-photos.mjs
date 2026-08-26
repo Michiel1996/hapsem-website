@@ -60,40 +60,34 @@ if (fs.existsSync(michielSrc)) {
   console.log("✓ Michiel");
 }
 
-// Loïck — bron is beperkt in resolutie: max. 2× vergroten, nooit naar 1200px upscalen
+// Loïck — bron is vaak klein (chat/WhatsApp): nooit upscalen, max. kwaliteit
 const loickSrc = path.join(ASSETS, "loick-vanwetter-source.png");
 if (fs.existsSync(loickSrc)) {
   const meta = await sharp(loickSrc).metadata();
   const srcW = meta.width ?? 300;
   const srcH = meta.height ?? 400;
-  const profileW = Math.min(PROFILE_W, srcW * 2);
-  const profileH = Math.min(PROFILE_H, Math.round(profileW * (5 / 4)));
   const thumbSize = Math.min(THUMB_SIZE, srcW);
 
-  const lightSharpen = (img) =>
-    img.sharpen({ sigma: 0.4, m1: 0.5, m2: 0.2, x1: 2, y2: 10, y3: 20 });
+  // Lichte verscherping op de bron, zonder pixels te verzinnen
+  const sharpenNative = (img) =>
+    img.sharpen({ sigma: 0.7, m1: 0.8, m2: 0.3, x1: 2, y2: 10, y3: 20 });
 
-  const loickProfile = lightSharpen(
-    sharp(loickSrc).resize(profileW, profileH, {
-      fit: "cover",
-      position: "centre",
-      kernel: sharp.kernel.lanczos3,
-      withoutEnlargement: false,
-    })
-  ).webp({ quality: WEBP_QUALITY, effort: 6, smartSubsample: false });
+  await sharpenNative(sharp(loickSrc))
+    .webp({ quality: 98, effort: 6, smartSubsample: false, nearLossless: true })
+    .toFile(path.join(OUT_DIR, "loick-vanwetter.webp"));
 
-  const loickThumb = lightSharpen(
+  await sharpenNative(
     sharp(loickSrc).resize(thumbSize, thumbSize, {
       fit: "cover",
       position: "centre",
       kernel: sharp.kernel.lanczos3,
       withoutEnlargement: true,
     })
-  ).webp({ quality: THUMB_QUALITY, effort: 6, smartSubsample: false });
+  )
+    .webp({ quality: 95, effort: 6, smartSubsample: false })
+    .toFile(path.join(OUT_DIR, "loick-vanwetter-thumb.webp"));
 
-  await loickProfile.toFile(path.join(OUT_DIR, "loick-vanwetter.webp"));
-  await loickThumb.toFile(path.join(OUT_DIR, "loick-vanwetter-thumb.webp"));
-  console.log(`✓ Loïck (${srcW}×${srcH} → profiel ${profileW}×${profileH}, thumb ${thumbSize}px)`);
+  console.log(`✓ Loïck (native ${srcW}×${srcH}, geen upscale, thumb ${thumbSize}px)`);
 }
 
 // Gianni — van bestaande jpg
