@@ -17,7 +17,7 @@ export function JsonLd() {
     alternateName: PRACTICE.shortName,
     description: PRACTICE.tagline,
     url: SITE_URL,
-    telephone: "+32 9 384 48 70",
+    telephone: "+32 9 311 87 27",
     email: PRACTICE.email,
     image: `${SITE_URL}/images/logo-hapsem-seal.png`,
     address: {

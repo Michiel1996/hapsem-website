@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { FAQ_ITEMS } from "@/lib/faq-data";
+import { PRACTICE } from "@/lib/constants";
 import { CTABanner } from "@/components/shared/CTABanner";
 
 export const metadata: Metadata = {
@@ -50,7 +51,7 @@ export default function FAQPage() {
 
       <CTABanner
         title="Staat uw vraag er niet bij?"
-        description="Bel ons op 09 384 48 70 of maak online een afspraak via Medici."
+        description={`Bel ons op ${PRACTICE.phone} of maak online een afspraak via Medici.`}
       />
     </>
   );

@@ -5,7 +5,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Hoe maak ik een afspraak?",
     answer:
-      "U maakt het beste online een afspraak via Medici. Klik op 'Maak online afspraak' op onze website. Heeft u een dringend probleem en zijn er online geen plaatsen meer vrij, bel dan telefonisch naar 09 384 48 70.",
+      "U maakt het beste online een afspraak via Medici. Klik op 'Maak online afspraak' op onze website. Heeft u een dringend probleem en zijn er online geen plaatsen meer vrij, bel dan telefonisch naar 09 311 87 27 (vanaf 1 oktober 2026; tot die datum: 09 384 48 70).",
   },
   {
     question: "Kan ik kiezen bij welke arts ik terecht?",
@@ -52,7 +52,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Wat moet ik doen bij spoed buiten de spreekuren?",
     answer:
-      "Bel eerst uw huisarts op 09 384 48 70. In het weekend (vrijdag 19u tot maandag 8u) en op feestdagen: bel 1733 voor de wachtdienst. Bij levensbedreigende situaties: bel 112.",
+      "Bel eerst uw huisarts op 09 311 87 27 (vanaf 1 oktober 2026; tot die datum: 09 384 48 70). In het weekend (vrijdag 19u tot maandag 8u) en op feestdagen: bel 1733 voor de wachtdienst. Bij levensbedreigende situaties: bel 112.",
   },
   {
     question: "Komen jullie aan huis voor huisbezoeken?",

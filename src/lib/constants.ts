@@ -6,7 +6,7 @@
 export const RELOCATION = {
   date: "1 oktober 2026",
   notice:
-    "Vanaf 1 oktober 2026 verhuist onze praktijk naar Dorpstraat 60 te Semmerzake. Alle consultaties vinden vanaf die datum plaats op deze locatie. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23.",
+    "Vanaf 1 oktober 2026 verhuist onze praktijk naar Dorpstraat 60 te Semmerzake. Alle consultaties vinden vanaf die datum plaats op deze locatie. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23. Ons nieuwe telefoonnummer is vanaf die datum 09 311 87 27.",
   futureLocation:
     "In de toekomst zal onze praktijk verder uitbreiden in de volledig vernieuwde site van Schoenen Fami.",
   welcomeAtNewLocation:
@@ -31,8 +31,13 @@ export const PRACTICE = {
     country: "België",
     full: "Opperweg 23, 9890 Gavere",
   },
-  phone: "09 384 48 70",
-  phoneHref: "tel:+3293844870",
+  /** Nieuw telefoonnummer vanaf 1 oktober 2026 */
+  phone: "09 311 87 27",
+  phoneHref: "tel:+3293118727",
+  phoneLabel: "Nieuw telefoonnummer vanaf 1 oktober 2026",
+  /** Huidig nummer tot 1 oktober 2026 */
+  formerPhone: "09 384 48 70",
+  formerPhoneHref: "tel:+3293844870",
   email: "info@huisartsenpraktijksemmerzake.be",
   emailHref: "mailto:info@huisartsenpraktijksemmerzake.be",
 } as const;

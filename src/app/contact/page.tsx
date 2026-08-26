@@ -9,7 +9,7 @@ import { RelocationBanner } from "@/components/shared/RelocationBanner";
 export const metadata: Metadata = {
   title: "Contact & ligging",
   description:
-    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake (Gavere) — Dorpstraat 60, 9890 Semmerzake. Telefoon 09 384 48 70, online afspraken via Medici.",
+    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake (Gavere) — Dorpstraat 60, 9890 Semmerzake. Telefoon 09 311 87 27 (vanaf 1 oktober 2026), online afspraken via Medici.",
   keywords: ["contact huisarts Semmerzake", "huisarts Gavere", "Dorpstraat 60", "HAPSEM"],
 };
 
@@ -53,7 +53,10 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={80}>
                 <div className="card-premium">
-                  <h2 className="text-xl font-semibold text-medical-900">Telefoon</h2>
+                  <p className="text-sm font-medium text-gold-500">
+                    {PRACTICE.phoneLabel}
+                  </p>
+                  <h2 className="mt-2 text-xl font-semibold text-medical-900">Telefoon</h2>
                   <a
                     href={PRACTICE.phoneHref}
                     className="mt-4 block font-display text-2xl font-semibold text-medical-700 hover:text-medical-900"
@@ -61,7 +64,14 @@ export default function ContactPage() {
                     {PRACTICE.phone}
                   </a>
                   <p className="mt-2 text-sm text-medical-500">
-                    Bij dringende problemen buiten spreekuren: zie wachtdienst.
+                    Tot 1 oktober 2026 bereikbaar op{" "}
+                    <a
+                      href={PRACTICE.formerPhoneHref}
+                      className="font-medium text-medical-700 hover:underline"
+                    >
+                      {PRACTICE.formerPhone}
+                    </a>
+                    . Bij dringende problemen buiten spreekuren: zie wachtdienst.
                   </p>
                 </div>
               </AnimateOnScroll>

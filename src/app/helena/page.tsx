@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { HELENA_URL } from "@/lib/constants";
+import { HELENA_URL, PRACTICE } from "@/lib/constants";
 import { Button } from "@/components/ui/Button";
 import { CTABanner } from "@/components/shared/CTABanner";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
@@ -80,7 +80,7 @@ export default function HelenaPage() {
 
       <CTABanner
         title="Vragen over uw resultaten?"
-        description="Bel 09 384 48 70 of maak een afspraak voor overleg met uw huisarts."
+        description={`Bel ${PRACTICE.phone} of maak een afspraak voor overleg met uw huisarts.`}
       />
     </>
   );
