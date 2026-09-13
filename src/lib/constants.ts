@@ -42,8 +42,8 @@ export const PRACTICE = {
   emailHref: "mailto:info@huisartsenpraktijksemmerzake.be",
 } as const;
 
-/** Productiedomein — gebruikt voor canonical URLs, sitemap en structured data */
-export const SITE_URL = "https://huisartsenpraktijksemmerzake.be";
+/** Productiedomein — canonieke www-versie voor canonicals, sitemap en structured data */
+export const SITE_URL = "https://www.huisartsenpraktijksemmerzake.be";
 
 /** GPS-coördinaten Dorpstraat 60, 9890 Semmerzake (centrum Semmerzake) */
 export const PRACTICE_GEO = {

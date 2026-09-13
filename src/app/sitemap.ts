@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 
+/** Publieke, indexeerbare pagina's — absolute www-URL's voor Google */
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
-    { path: "", priority: 1.0 },
+    { path: "/", priority: 1.0 },
     { path: "/over-de-praktijk", priority: 0.8 },
     { path: "/team", priority: 0.9 },
     { path: "/sportgeneeskunde", priority: 0.9 },
@@ -17,9 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return routes.map(({ path, priority }) => ({
-    url: `${SITE_URL}${path}`,
+    url: `${SITE_URL}${path === "/" ? "/" : path}`,
     lastModified: new Date(),
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority,
   }));
 }

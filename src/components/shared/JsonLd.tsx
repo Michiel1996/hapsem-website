@@ -16,10 +16,11 @@ export function JsonLd() {
     name: PRACTICE.name,
     alternateName: PRACTICE.shortName,
     description: PRACTICE.tagline,
-    url: SITE_URL,
+    url: `${SITE_URL}/`,
     telephone: "+32 9 311 87 27",
     email: PRACTICE.email,
     image: `${SITE_URL}/images/logo-hapsem-seal.png`,
+    logo: `${SITE_URL}/images/logo-hapsem-seal.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: PRACTICE.address.street,

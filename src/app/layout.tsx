@@ -27,8 +27,12 @@ export const metadata: Metadata = {
   description:
     "Huisartsenpraktijk Semmerzake (HAPSEM) — huisarts in Semmerzake en Gavere. Twee vaste huisartsen, sportgeneeskunde met Dr. Gianni Faelens, online afspraken via Medici. Dorpstraat 60, Semmerzake vanaf oktober 2026.",
   keywords: [...SEO_KEYWORDS],
+  robots: {
+    index: true,
+    follow: true,
+  },
   alternates: {
-    canonical: "./",
+    canonical: "/",
   },
   openGraph: {
     title: `${PRACTICE.name} (${PRACTICE.shortName})`,
