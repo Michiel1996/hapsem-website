@@ -110,7 +110,11 @@ export default function TeamPage() {
                   initials="AV"
                 >
                   <div className="mt-6">
-                    <AppointmentButton size="sm" label="Afspraak met diëtiste" />
+                    <AppointmentButton
+                      size="sm"
+                      label="Afspraak met diëtiste"
+                      href={member.appointmentUrl}
+                    />
                   </div>
                 </TeamMemberCard>
               </AnimateOnScroll>

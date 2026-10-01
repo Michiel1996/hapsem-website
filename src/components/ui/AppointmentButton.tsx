@@ -6,20 +6,23 @@ interface AppointmentButtonProps {
   size?: "sm" | "md" | "lg";
   variant?: "primary" | "secondary" | "outline";
   className?: string;
+  /** Optionele externe boekings-URL (standaard: Medici) */
+  href?: string;
 }
 
 /**
- * Alle afspraakknoppen verwijzen naar Medici — nooit naar afspraken.be.
+ * Afspraakknop — standaard Medici; optioneel een andere boekingslink (bv. diëtiste).
  */
 export function AppointmentButton({
   label = "Maak online afspraak",
   size = "md",
   variant = "primary",
   className = "",
+  href = MEDICI_APPOINTMENT_URL,
 }: AppointmentButtonProps) {
   return (
     <Button
-      href={MEDICI_APPOINTMENT_URL}
+      href={href}
       external
       variant={variant}
       size={size}

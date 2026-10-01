@@ -55,6 +55,10 @@ export const PRACTICE_GEO = {
 export const MEDICI_APPOINTMENT_URL =
   "https://www.mtc-it4.be/patient/index.html#/appointments/day/bjNkcWkyQmFRMkpDVTRFNndleFgzTEg2UjB3RDlUcm5GS2RxUEpDcUtPZW9BSXJoMWVvNFJzakxua202b1YwaQ==";
 
+/** Online afspraken diëtiste Audrey Vanwetter (Salonized) */
+export const DIETITIAN_APPOINTMENT_URL =
+  "https://het-power-plan.salonized.com/widget_bookings/new";
+
 export const HELENA_URL = "https://helena.care/";
 
 /** Uitgebreid profiel Dr. Michiel Vercruysse */
@@ -165,6 +169,7 @@ export const TEAM_EXTRA = [
     role: "Diëtiste",
     description:
       "Begeleidt u bij gezonde voedingskeuzes. Preventieve zorg staat centraal in onze praktijk.",
+    appointmentUrl: DIETITIAN_APPOINTMENT_URL,
   },
 ] as const;
 
