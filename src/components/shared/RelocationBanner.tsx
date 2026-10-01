@@ -1,14 +1,18 @@
 import Link from "next/link";
-import { PRACTICE, RELOCATION } from "@/lib/constants";
+import { PRACTICE, RELOCATION, MAP_LINK } from "@/lib/constants";
+import { Button } from "@/components/ui/Button";
 
 interface RelocationBannerProps {
+  /** Toon knoppen voor route en telefoon (homepage) */
+  showActions?: boolean;
   /** Toon ook info over toekomstige uitbreiding (Schoenen Fami) */
   showFutureLocation?: boolean;
   className?: string;
 }
 
-/** Opvallende melding over de verhuis vanaf 1 oktober 2026 */
+/** Tijdelijke verhuisboodschap — praktijk is verhuisd sinds 1 oktober 2026 */
 export function RelocationBanner({
+  showActions = false,
   showFutureLocation = false,
   className = "",
 }: RelocationBannerProps) {
@@ -20,35 +24,55 @@ export function RelocationBanner({
       {/* Compacte variant — mobiel */}
       <div className="container-wide sm:hidden">
         <p className="text-sm leading-snug text-medical-800">
-          <span className="font-semibold text-medical-900">
-            Vanaf {RELOCATION.date}:
-          </span>{" "}
-          {PRACTICE.address.street}, Semmerzake ·{" "}
+          <span className="font-semibold text-medical-900">We zijn verhuisd!</span>{" "}
+          Sinds {RELOCATION.date}: {PRACTICE.address.street}, Semmerzake ·{" "}
           <Link href="/contact" className="font-medium text-medical-700 underline">
             meer info
           </Link>
         </p>
+        {showActions && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            <Button href={MAP_LINK} external variant="outline" size="sm">
+              Route
+            </Button>
+            <Button href={PRACTICE.phoneHref} variant="primary" size="sm">
+              Bel {PRACTICE.phone}
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* Volledige variant — vanaf tablet */}
-      <div className="container-wide hidden gap-3 sm:flex">
-        <span className="mt-0.5 shrink-0 text-amber-600" aria-hidden>
-          <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </span>
-        <div className="text-sm leading-relaxed text-medical-800 sm:text-base">
-          <p className="font-semibold text-medical-900">Belangrijke mededeling</p>
-          <p className="mt-1">{RELOCATION.notice}</p>
-          {showFutureLocation && (
-            <p className="mt-3 text-medical-700">{RELOCATION.futureLocation}</p>
-          )}
+      <div className="container-wide hidden gap-3 sm:flex sm:items-start sm:justify-between">
+        <div className="flex gap-3">
+          <span className="mt-0.5 shrink-0 text-amber-600" aria-hidden>
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+          </span>
+          <div className="text-sm leading-relaxed text-medical-800 sm:text-base">
+            <p className="font-semibold text-medical-900">We zijn verhuisd!</p>
+            <p className="mt-1">{RELOCATION.notice}</p>
+            {showFutureLocation && (
+              <p className="mt-3 text-medical-700">{RELOCATION.futureLocation}</p>
+            )}
+          </div>
         </div>
+        {showActions && (
+          <div className="flex shrink-0 flex-wrap gap-2">
+            <Button href={MAP_LINK} external variant="outline" size="sm">
+              Route plannen
+            </Button>
+            <Button href={PRACTICE.phoneHref} variant="primary" size="sm">
+              Bel {PRACTICE.phone}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );

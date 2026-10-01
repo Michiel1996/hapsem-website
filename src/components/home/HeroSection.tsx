@@ -6,7 +6,7 @@ import { RelocationBanner } from "@/components/shared/RelocationBanner";
 export function HeroSection() {
   return (
     <>
-      <RelocationBanner />
+      <RelocationBanner showActions />
       <section className="relative min-h-[85vh] overflow-hidden section-gradient">
         <div
           className="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-medical-200/20 blur-3xl animate-float"

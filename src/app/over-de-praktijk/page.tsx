@@ -10,7 +10,7 @@ import { RELOCATION, PRACTICE, SPORT_DOCTOR } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Over de praktijk",
   description:
-    "Leer Huisartsenpraktijk Semmerzake (HAPSEM) kennen. Twee vaste huisartsen, sportgeneeskunde, geen patiëntenstop. Praktijklocatie Dorpstraat 60 vanaf oktober 2026.",
+    "Leer Huisartsenpraktijk Semmerzake (HAPSEM) kennen. Twee vaste huisartsen, sportgeneeskunde, geen patiëntenstop. Praktijklocatie Dorpstraat 60, Semmerzake.",
 };
 
 export default function OverDePraktijkPage() {
@@ -35,15 +35,15 @@ export default function OverDePraktijkPage() {
                 bij de collega.
               </p>
               <p className="mt-4">
-                Vanaf oktober 2026 vervoegt {SPORT_DOCTOR.name} onze praktijk als
-                sportarts. {SPORT_DOCTOR.disclaimer}
+                {SPORT_DOCTOR.name} is verbonden aan onze praktijk als sportarts.{" "}
+                {SPORT_DOCTOR.disclaimer}
               </p>
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={80}>
             <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-amber-200 bg-amber-50/70 p-6 text-center text-medical-700">
-              <p className="font-semibold text-medical-900">Verhuis praktijk</p>
+              <p className="font-semibold text-medical-900">We zijn verhuisd</p>
               <p className="mt-2">{RELOCATION.notice}</p>
               <p className="mt-3 text-sm">{RELOCATION.futureLocation}</p>
             </div>
@@ -99,12 +99,12 @@ export default function OverDePraktijkPage() {
             <AnimateOnScroll delay={250}>
               <InfoCard title="Praktijklocatie">
                 <p>
-                  {RELOCATION.welcomeAtNewLocation},{" "}
+                  U vindt ons op{" "}
                   <strong>
                     {PRACTICE.address.street}, {PRACTICE.address.postal}
                   </strong>
-                  . Alle consultaties vinden vanaf die datum plaats op deze
-                  locatie. Op {PRACTICE.formerAddress.full} vinden vanaf dan geen
+                  . Alle consultaties vinden plaats op deze locatie. Op het
+                  voormalige adres {PRACTICE.formerAddress.full} vinden geen
                   consultaties meer plaats.
                 </p>
               </InfoCard>

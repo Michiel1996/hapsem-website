@@ -3,14 +3,15 @@
  * Alle pagina's halen hun data hier vandaan.
  */
 
+/** Verhuis is afgerond sinds 1 oktober 2026 — tijdelijke boodschap op de homepage */
 export const RELOCATION = {
   date: "1 oktober 2026",
   notice:
-    "Vanaf 1 oktober 2026 verhuist onze praktijk naar Dorpstraat 60 te Semmerzake. Alle consultaties vinden vanaf die datum plaats op deze locatie. Er vinden vanaf die datum geen consultaties meer plaats op het adres Opperweg 23. Ons nieuwe telefoonnummer is vanaf die datum 09 311 87 27.",
+    "We zijn verhuisd! Sinds 1 oktober 2026 vindt u ons op Dorpstraat 60 in Semmerzake.",
+  noticeDetail:
+    "Alle consultaties vinden plaats op Dorpstraat 60, 9890 Semmerzake. Ons telefoonnummer is 09 311 87 27. Op het voormalige adres Opperweg 23 vinden geen consultaties meer plaats.",
   futureLocation:
     "In de toekomst zal onze praktijk verder uitbreiden in de volledig vernieuwde site van Schoenen Fami.",
-  welcomeAtNewLocation:
-    "Vanaf 1 oktober 2026 verwelkomen wij u op onze nieuwe praktijklocatie",
 } as const;
 
 export const PRACTICE = {
@@ -22,22 +23,17 @@ export const PRACTICE = {
     postal: "9890 Semmerzake",
     country: "België",
     full: "Dorpstraat 60, 9890 Semmerzake, België",
-    label: "Nieuwe praktijklocatie vanaf 1 oktober 2026",
+    label: "Praktijklocatie",
   },
-  /** Voormalig consultatieadres — geen consultaties meer vanaf 1 oktober 2026 */
+  /** Voormalig consultatieadres — enkel nog vermelden in expliciete verhuisboodschap */
   formerAddress: {
     street: "Opperweg 23",
     postal: "9890 Gavere",
     country: "België",
     full: "Opperweg 23, 9890 Gavere",
   },
-  /** Nieuw telefoonnummer vanaf 1 oktober 2026 */
   phone: "09 311 87 27",
   phoneHref: "tel:+3293118727",
-  phoneLabel: "Nieuw telefoonnummer vanaf 1 oktober 2026",
-  /** Huidig nummer tot 1 oktober 2026 */
-  formerPhone: "09 384 48 70",
-  formerPhoneHref: "tel:+3293844870",
   email: "info@huisartsenpraktijksemmerzake.be",
   emailHref: "mailto:info@huisartsenpraktijksemmerzake.be",
 } as const;
@@ -127,15 +123,15 @@ export const CONSULTING_DOCTORS: ConsultingDoctor[] = [
   },
 ];
 
-/** Dr. Dirk Lauwerier — geen consultaties meer vanaf oktober 2026 */
+/** Dr. Dirk Lauwerier — geen gewone consultaties meer sinds oktober 2026 */
 export const FORMER_CONSULTING_DOCTOR = {
   name: "Dr. Dirk Lauwerier",
   role: "Huisbezoeken (bestaande patiënten)",
   note:
-    "Dr. Dirk Lauwerier voert vanaf oktober 2026 enkel nog huisbezoeken uit voor zijn bestaande patiënten en houdt geen consultaties meer in de praktijk.",
+    "Dr. Dirk Lauwerier voert enkel nog huisbezoeken uit voor zijn bestaande patiënten en houdt geen consultaties meer in de praktijk.",
 } as const;
 
-/** Sportarts — vanaf 1 oktober 2026 */
+/** Sportarts — sinds 1 oktober 2026 */
 export const SPORT_DOCTOR = {
   name: "Dr. Gianni Faelens",
   role: "Sportarts · Keuringsarts · Duikarts",
@@ -143,7 +139,7 @@ export const SPORT_DOCTOR = {
   imageThumb: "/images/gianni-faelens-thumb.webp",
   imageCredit: "Foto: HERO Edegem",
   intro:
-    "Vanaf 1 oktober 2026 vervoegt Dr. Gianni Faelens onze praktijk als sportarts, keuringsarts en duikarts.",
+    "Sinds 1 oktober 2026 is Dr. Gianni Faelens verbonden aan onze praktijk als sportarts, keuringsarts en duikarts.",
   description:
     "Binnen onze praktijk richt hij zich op sportgeneeskunde, blessurepreventie, sportmedische keuringen en de begeleiding van zowel recreatieve als competitieve sporters.",
   disclaimer:

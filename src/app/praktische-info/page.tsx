@@ -4,12 +4,12 @@ import { InfoCard } from "@/components/shared/InfoCard";
 import { CTABanner } from "@/components/shared/CTABanner";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { AppointmentButton } from "@/components/ui/AppointmentButton";
-import { PRACTICE, RELOCATION } from "@/lib/constants";
+import { PRACTICE, RELOCATION, FORMER_CONSULTING_DOCTOR } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Praktische info",
   description:
-    "Betalingen, voorschriften, huisbezoeken, spoedgevallen, GMD en tarieven. Praktijklocatie Dorpstraat 60, Semmerzake vanaf oktober 2026.",
+    "Betalingen, voorschriften, huisbezoeken, spoedgevallen, GMD en tarieven. Praktijklocatie Dorpstraat 60, Semmerzake. Telefoon 09 311 87 27.",
 };
 
 export default function PraktischeInfoPage() {
@@ -27,9 +27,12 @@ export default function PraktischeInfoPage() {
               <p className="font-semibold text-medical-900">Praktijklocatie</p>
               <p className="mt-2">{RELOCATION.notice}</p>
               <p className="mt-3 text-sm">
-                Huidig consultatieadres tot 1 oktober 2026: {PRACTICE.formerAddress.full}.
-                Vanaf 1 oktober 2026: <strong>{PRACTICE.address.full}</strong> — alle
-                consultaties vinden daar plaats.
+                Adres: <strong>{PRACTICE.address.full}</strong> — telefoon{" "}
+                <a href={PRACTICE.phoneHref} className="font-medium text-medical-700 hover:underline">
+                  {PRACTICE.phone}
+                </a>
+                . Op het voormalige adres {PRACTICE.formerAddress.full} vinden geen
+                consultaties meer plaats.
               </p>
             </div>
           </AnimateOnScroll>
@@ -70,8 +73,7 @@ export default function PraktischeInfoPage() {
                   >
                     {PRACTICE.phone}
                   </a>{" "}
-                  om dit te bespreken. Dr. Dirk Lauwerier voert vanaf oktober 2026 enkel nog
-                  huisbezoeken uit voor zijn bestaande patiënten.
+                  om dit te bespreken. {FORMER_CONSULTING_DOCTOR.note}
                 </p>
               </InfoCard>
             </AnimateOnScroll>
@@ -122,8 +124,8 @@ export default function PraktischeInfoPage() {
             <AnimateOnScroll delay={320}>
               <InfoCard title="Sportgeneeskunde">
                 <p>
-                  Vanaf oktober 2026 bieden wij sportmedische consultaties aan via Dr. Gianni
-                  Faelens. Zie de pagina Sportgeneeskunde voor inspanningstesten, sportkeuringen,
+                  Wij bieden sportmedische consultaties aan via Dr. Gianni Faelens. Zie de
+                  pagina Sportgeneeskunde voor inspanningstesten, sportkeuringen,
                   duikmedische keuringen en meer.
                 </p>
               </InfoCard>

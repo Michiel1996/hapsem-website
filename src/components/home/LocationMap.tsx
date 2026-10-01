@@ -9,7 +9,7 @@ export function LocationMap() {
       <div className="container-wide">
         <SectionHeading
           title="Locatie"
-          subtitle="Onze praktijklocatie in Semmerzake — vanaf 1 oktober 2026."
+          subtitle="Onze praktijklocatie in Semmerzake."
         />
 
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">

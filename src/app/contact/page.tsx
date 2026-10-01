@@ -1,22 +1,20 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
-import { PRACTICE, OPENING_HOURS, MAP_EMBED_URL, MAP_LINK } from "@/lib/constants";
+import { PRACTICE, OPENING_HOURS, MAP_EMBED_URL, MAP_LINK, RELOCATION } from "@/lib/constants";
 import { AppointmentButton } from "@/components/ui/AppointmentButton";
 import { Button } from "@/components/ui/Button";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
-import { RelocationBanner } from "@/components/shared/RelocationBanner";
 
 export const metadata: Metadata = {
   title: "Contact & ligging",
   description:
-    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake (Gavere) — Dorpstraat 60, 9890 Semmerzake. Telefoon 09 311 87 27 (vanaf 1 oktober 2026), online afspraken via Medici.",
+    "Contactgegevens en locatie van Huisartsenpraktijk Semmerzake (Gavere) — Dorpstraat 60, 9890 Semmerzake. Telefoon 09 311 87 27, online afspraken via Medici.",
   keywords: ["contact huisarts Semmerzake", "huisarts Gavere", "Dorpstraat 60", "HAPSEM"],
 };
 
 export default function ContactPage() {
   return (
     <>
-      <RelocationBanner showFutureLocation />
       <PageHero
         title="Contact & ligging"
         subtitle="Wij staan voor u klaar — bereik ons via telefoon, e-mail of online."
@@ -24,6 +22,15 @@ export default function ContactPage() {
 
       <section className="py-16 md:py-24">
         <div className="container-wide">
+          <AnimateOnScroll>
+            <div className="mb-10 rounded-2xl border border-amber-200 bg-amber-50/70 p-6 text-medical-700">
+              <p className="font-semibold text-medical-900">We zijn verhuisd</p>
+              <p className="mt-2">{RELOCATION.notice}</p>
+              <p className="mt-2 text-sm">{RELOCATION.noticeDetail}</p>
+              <p className="mt-3 text-sm text-medical-600">{RELOCATION.futureLocation}</p>
+            </div>
+          </AnimateOnScroll>
+
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="space-y-6">
               <AnimateOnScroll>
@@ -41,10 +48,6 @@ export default function ContactPage() {
                     <br />
                     {PRACTICE.address.country}
                   </address>
-                  <p className="mt-4 text-sm text-medical-500">
-                    Voormalig consultatieadres: {PRACTICE.formerAddress.full}. Geen
-                    consultaties meer vanaf 1 oktober 2026.
-                  </p>
                   <Button href={MAP_LINK} external variant="outline" className="mt-6">
                     Route in Google Maps
                   </Button>
@@ -53,9 +56,7 @@ export default function ContactPage() {
 
               <AnimateOnScroll delay={80}>
                 <div className="card-premium">
-                  <p className="text-sm font-medium text-gold-500">
-                    {PRACTICE.phoneLabel}
-                  </p>
+                  <p className="text-sm font-medium text-gold-500">Bereikbaar</p>
                   <h2 className="mt-2 text-xl font-semibold text-medical-900">Telefoon</h2>
                   <a
                     href={PRACTICE.phoneHref}
@@ -64,14 +65,7 @@ export default function ContactPage() {
                     {PRACTICE.phone}
                   </a>
                   <p className="mt-2 text-sm text-medical-500">
-                    Tot 1 oktober 2026 bereikbaar op{" "}
-                    <a
-                      href={PRACTICE.formerPhoneHref}
-                      className="font-medium text-medical-700 hover:underline"
-                    >
-                      {PRACTICE.formerPhone}
-                    </a>
-                    . Bij dringende problemen buiten spreekuren: zie wachtdienst.
+                    Bij dringende problemen buiten spreekuren: zie wachtdienst.
                   </p>
                 </div>
               </AnimateOnScroll>

@@ -11,7 +11,7 @@ import { InfoCard } from "@/components/shared/InfoCard";
 export const metadata: Metadata = {
   title: "Sportgeneeskunde",
   description:
-    "Sportarts Dr. Gianni Faelens bij HAPSEM Semmerzake (regio Gavere–Gent). Sportkeuring, duikarts, inspanningstest, sportletsels, echografie en blessurepreventie. Vanaf 1 oktober 2026.",
+    "Sportarts Dr. Gianni Faelens bij HAPSEM Semmerzake (regio Gavere–Gent). Sportkeuring, duikarts, inspanningstest, sportletsels, echografie en blessurepreventie.",
   keywords: [
     "sportarts Semmerzake",
     "sportarts Gavere",
@@ -31,7 +31,7 @@ export default function SportgeneeskundePage() {
     <>
       <PageHero
         title="Sportgeneeskunde"
-        subtitle="Sportmedische begeleiding binnen onze praktijk — vanaf 1 oktober 2026."
+        subtitle="Sportmedische begeleiding binnen onze praktijk."
         showAppointment
       />
 
@@ -119,7 +119,7 @@ export default function SportgeneeskundePage() {
 
           <p className="mt-10 text-center text-sm text-medical-500">
             Consultaties vinden plaats op onze praktijklocatie {PRACTICE.address.street},{" "}
-            {PRACTICE.address.postal} (vanaf 1 oktober 2026).
+            {PRACTICE.address.postal}.
           </p>
 
           <div className="mt-8 flex justify-center">

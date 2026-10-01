@@ -10,7 +10,7 @@ export function OpeningHours() {
       <div className="container-narrow">
         <SectionHeading
           title="Openingsuren"
-          subtitle={`Vanaf 1 oktober 2026: ${PRACTICE.address.street}, ${PRACTICE.address.postal}`}
+          subtitle={`${PRACTICE.address.street}, ${PRACTICE.address.postal}`}
         />
 
         <AnimateOnScroll>

@@ -5,7 +5,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Hoe maak ik een afspraak?",
     answer:
-      "U maakt het beste online een afspraak via Medici. Klik op 'Maak online afspraak' op onze website. Heeft u een dringend probleem en zijn er online geen plaatsen meer vrij, bel dan telefonisch naar 09 311 87 27 (vanaf 1 oktober 2026; tot die datum: 09 384 48 70).",
+      `U maakt het beste online een afspraak via Medici. Klik op 'Maak online afspraak' op onze website. Heeft u een dringend probleem en zijn er online geen plaatsen meer vrij, bel dan telefonisch naar ${PRACTICE.phone}.`,
   },
   {
     question: "Kan ik kiezen bij welke arts ik terecht?",
@@ -13,8 +13,8 @@ export const FAQ_ITEMS: FAQItem[] = [
       "Ja. U kiest zelf bij welke van onze twee consulterende huisartsen u een afspraak wenst: Dr. Michiel Vercruysse of Dr. Loïck Vanwetter. Alle consulterende artsen kunnen uw medisch dossier raadplegen. Bij dringende problemen kunt u ook terecht bij een collega als uw vaste arts volzet is.",
   },
   {
-    question: "Waar vindt de praktijk plaats vanaf oktober 2026?",
-    answer: `${RELOCATION.notice} ${RELOCATION.futureLocation}`,
+    question: "Waar is de praktijk gevestigd?",
+    answer: `${RELOCATION.notice} ${RELOCATION.noticeDetail} ${RELOCATION.futureLocation}`,
   },
   {
     question: "Kan ik nog terecht bij Dr. Dirk Lauwerier?",
@@ -52,7 +52,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Wat moet ik doen bij spoed buiten de spreekuren?",
     answer:
-      "Bel eerst uw huisarts op 09 311 87 27 (vanaf 1 oktober 2026; tot die datum: 09 384 48 70). In het weekend (vrijdag 19u tot maandag 8u) en op feestdagen: bel 1733 voor de wachtdienst. Bij levensbedreigende situaties: bel 112.",
+      `Bel eerst uw huisarts op ${PRACTICE.phone}. In het weekend (vrijdag 19u tot maandag 8u) en op feestdagen: bel 1733 voor de wachtdienst. Bij levensbedreigende situaties: bel 112.`,
   },
   {
     question: "Komen jullie aan huis voor huisbezoeken?",
