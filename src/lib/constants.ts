@@ -157,6 +157,17 @@ export const SPORT_DOCTOR = {
   ],
   summary:
     "U kan bij hem terecht voor sportmedische consultaties, blessurepreventie, sportletsels, inspanningsadvies en sportgerelateerde onderzoeken.",
+  /** Remgeld — bedragen die de patiënt zelf betaalt */
+  fees: [
+    { label: "Consultatie", amount: "€ 19 remgeld" },
+    { label: "Consultatie met echografie", amount: "€ 29 remgeld" },
+    { label: "Consultatie met shockwave-therapie", amount: "€ 60 remgeld" },
+    {
+      label: "Consultatie met infiltratie",
+      amount: "€ 35 – 75 remgeld",
+      note: "Afhankelijk van het geïnjecteerde product",
+    },
+  ],
 } as const;
 
 export type TeamExtraMember = {

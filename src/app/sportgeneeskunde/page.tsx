@@ -117,6 +117,35 @@ export default function SportgeneeskundePage() {
             </AnimateOnScroll>
           </div>
 
+          <SectionHeading
+            title="Tarieven"
+            subtitle="Overzicht van het remgeld voor sportmedische consultaties."
+            className="mt-20"
+          />
+
+          <AnimateOnScroll>
+            <div className="mx-auto max-w-2xl card-premium">
+              <ul className="divide-y divide-medical-100">
+                {SPORT_DOCTOR.fees.map((fee) => (
+                  <li
+                    key={fee.label}
+                    className="flex flex-col gap-1 py-4 first:pt-0 last:pb-0 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+                  >
+                    <div>
+                      <p className="font-medium text-medical-800">{fee.label}</p>
+                      {"note" in fee && fee.note ? (
+                        <p className="mt-0.5 text-sm text-medical-500">{fee.note}</p>
+                      ) : null}
+                    </div>
+                    <p className="shrink-0 font-semibold text-medical-700 sm:text-right">
+                      {fee.amount}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </AnimateOnScroll>
+
           <p className="mt-10 text-center text-sm text-medical-500">
             Consultaties vinden plaats op onze praktijklocatie {PRACTICE.address.street},{" "}
             {PRACTICE.address.postal}.
