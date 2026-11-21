@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { resolveTeamDescription } from "@/lib/constants";
 
 interface TeamMemberCardProps {
   name: string;
   role: string;
+  /** Optionele bio — wordt enkel getoond als effectief ingevuld */
   description?: string;
   image?: string;
   imageAlt?: string;
@@ -24,6 +26,7 @@ export function TeamMemberCard({
   children,
   variant = "default",
 }: TeamMemberCardProps) {
+  const bio = resolveTeamDescription(description);
   const avatarClass =
     variant === "sport"
       ? "bg-gradient-to-br from-gold-400/30 to-medical-100"
@@ -55,9 +58,9 @@ export function TeamMemberCard({
       <h3 className="text-xl font-semibold text-medical-900">{name}</h3>
       <p className="mt-1 text-sm font-medium text-gold-500">{role}</p>
 
-      {description && (
-        <p className="mt-4 text-medical-600 leading-relaxed">{description}</p>
-      )}
+      {bio ? (
+        <p className="mt-4 text-medical-600 leading-relaxed">{bio}</p>
+      ) : null}
 
       {children}
 

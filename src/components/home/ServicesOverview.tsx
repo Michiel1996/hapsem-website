@@ -14,7 +14,7 @@ export function ServicesOverview() {
     {
       title: "Team & artsen",
       description:
-        "Maak kennis met onze huisartsen, sportarts en diëtiste.",
+        "Maak kennis met onze huisartsen, sportarts, onthaal & secretariaat en diëtiste.",
       href: "/team",
     },
     {

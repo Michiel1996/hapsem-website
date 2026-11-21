@@ -69,7 +69,7 @@ export const DR_MICHEL_VERCRUYSSE = {
     "De huisartsgeneeskunde spreekt mij aan door de combinatie van medische uitdaging, persoonlijk contact en langdurige begeleiding van patiënten. Ik hecht veel belang aan open communicatie en een vertrouwensrelatie, zodat u met al uw vragen en bezorgdheden bij mij terecht kunt. De brede waaier aan medische problematieken binnen de eerstelijnszorg maakt het vak bijzonder boeiend en afwisselend.",
     "Mijn interesse gaat uit naar alle aspecten van de huisartsgeneeskunde, met bijzondere aandacht voor preventieve gezondheidszorg, cardiovasculaire risicofactoren en een persoonlijke, patiëntgerichte aanpak.",
     "Naast mijn werk als huisarts ben ik een fervent sportliefhebber. Gedurende vele jaren speelde ik basketbal in clubverband, een sport waarin samenwerking, engagement en teamspirit centraal staan. Ook buiten de praktijk besteed ik graag tijd aan familie en vrienden.",
-    "Samen met mijn echtgenote Iris ben ik trotse ouder van onze dochter Jutta. Het gezinsleven vormt een belangrijke bron van energie en inspiratie, en helpt mij dagelijks om met betrokkenheid en empathie klaar te staan voor mijn patiënten.",
+    "Samen met mijn echtgenote Iris ben ik trotse ouder van onze dochters Jutta en Sienna. Het gezinsleven vormt een belangrijke bron van energie en inspiratie, en helpt mij dagelijks om met betrokkenheid en empathie klaar te staan voor mijn patiënten.",
   ],
 } as const;
 
@@ -159,15 +159,59 @@ export const SPORT_DOCTOR = {
     "U kan bij hem terecht voor sportmedische consultaties, blessurepreventie, sportletsels, inspanningsadvies en sportgerelateerde onderzoeken.",
 } as const;
 
-export const TEAM_EXTRA = [
-  {
-    name: "Audrey Vanwetter",
-    role: "Diëtiste",
-    description:
-      "Begeleidt u bij gezonde voedingskeuzes. Preventieve zorg staat centraal in onze praktijk.",
-    appointmentUrl: DIETITIAN_APPOINTMENT_URL,
-  },
-] as const;
+export type TeamExtraMember = {
+  name: string;
+  role: string;
+  /**
+   * Persoonlijke beschrijving/bio.
+   * Leeg of weggelaten = niet renderen. Later invullen volstaat.
+   */
+  description?: string;
+  /** Volledige portretfoto (WebP), zelfde aanpak als artsenfoto's */
+  image?: string;
+  /** Vierkante thumbnail voor teamkaarten / homepage */
+  imageThumb?: string;
+  imageAlt?: string;
+  initials?: string;
+  appointmentUrl?: string;
+};
+
+/** Alleen een niet-lege bio doorgeven aan UI-componenten */
+export function resolveTeamDescription(
+  description?: string
+): string | undefined {
+  const trimmed = description?.trim();
+  return trimmed ? trimmed : undefined;
+}
+
+/**
+ * Justine — onthaal & secretariaat.
+ * Vul later `description` in; homepage en teampagina tonen die automatisch.
+ */
+export const TEAM_SECRETARY: TeamExtraMember = {
+  name: "Justine",
+  role: "Onthaal & secretariaat",
+  description: undefined,
+  image: "/images/justine.webp",
+  imageThumb: "/images/justine-thumb.webp",
+  imageAlt: "Justine, onthaal en secretariaat bij Huisartsenpraktijk Semmerzake",
+};
+
+/** Diëtiste — na onthaal/secretariaat in het teamoverzicht */
+export const TEAM_DIETITIAN: TeamExtraMember = {
+  name: "Audrey Vanwetter",
+  role: "Diëtiste",
+  description:
+    "Begeleidt u bij gezonde voedingskeuzes. Preventieve zorg staat centraal in onze praktijk.",
+  initials: "AV",
+  appointmentUrl: DIETITIAN_APPOINTMENT_URL,
+};
+
+/** Volgorde: eerst onthaal/secretariaat, daarna diëtiste */
+export const TEAM_EXTRA: TeamExtraMember[] = [
+  TEAM_SECRETARY,
+  TEAM_DIETITIAN,
+];
 
 /** Spreekuren — pas aan indien nodig */
 export const OPENING_HOURS = [

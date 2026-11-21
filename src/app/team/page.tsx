@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import {
-  TEAM_EXTRA,
+  TEAM_SECRETARY,
+  TEAM_DIETITIAN,
   SPORT_DOCTOR,
   FORMER_CONSULTING_DOCTOR,
   CONSULTING_DOCTOR_PROFILES,
@@ -17,7 +18,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Team & artsen",
   description:
-    "Maak kennis met Dr. Michiel Vercruysse, Dr. Loïck Vanwetter, Dr. Gianni Faelens (sportarts) en Audrey Vanwetter (diëtiste). Huisartsenpraktijk Semmerzake (Gavere).",
+    "Maak kennis met Dr. Michiel Vercruysse, Dr. Loïck Vanwetter, Dr. Gianni Faelens (sportarts), Justine (onthaal & secretariaat) en Audrey Vanwetter (diëtiste). Huisartsenpraktijk Semmerzake (Gavere).",
   keywords: [
     "huisarts Semmerzake",
     "huisarts Gavere",
@@ -34,7 +35,7 @@ export default function TeamPage() {
     <>
       <PageHero
         title="Ons team"
-        subtitle="Twee vaste huisartsen, een sportarts en een diëtiste — één team, persoonlijke zorg."
+        subtitle="Twee vaste huisartsen, een sportarts, onthaal & secretariaat en een diëtiste — één team, persoonlijke zorg."
       />
 
       <section className="py-16 md:py-24">
@@ -95,30 +96,48 @@ export default function TeamPage() {
           </div>
 
           <SectionHeading
-            title="Aanvullend team"
+            title="Onthaal & secretariaat"
+            subtitle="Het eerste aanspreekpunt van de praktijk."
+            className="mt-20"
+          />
+
+          <div className="mx-auto max-w-sm">
+            <AnimateOnScroll>
+              <TeamMemberCard
+                name={TEAM_SECRETARY.name}
+                role={TEAM_SECRETARY.role}
+                description={TEAM_SECRETARY.description}
+                image={TEAM_SECRETARY.imageThumb ?? TEAM_SECRETARY.image}
+                imageAlt={TEAM_SECRETARY.imageAlt}
+              />
+            </AnimateOnScroll>
+          </div>
+
+          <SectionHeading
+            title="Diëtiste"
             subtitle="Preventieve zorg en voedingsbegeleiding."
             className="mt-20"
           />
 
-          <div className="grid gap-8 md:grid-cols-2 max-w-2xl mx-auto">
-            {TEAM_EXTRA.map((member, index) => (
-              <AnimateOnScroll key={member.name} delay={index * 100}>
-                <TeamMemberCard
-                  name={member.name}
-                  role={member.role}
-                  description={member.description}
-                  initials="AV"
-                >
+          <div className="mx-auto max-w-sm">
+            <AnimateOnScroll>
+              <TeamMemberCard
+                name={TEAM_DIETITIAN.name}
+                role={TEAM_DIETITIAN.role}
+                description={TEAM_DIETITIAN.description}
+                initials={TEAM_DIETITIAN.initials}
+              >
+                {TEAM_DIETITIAN.appointmentUrl ? (
                   <div className="mt-6">
                     <AppointmentButton
                       size="sm"
                       label="Afspraak met diëtiste"
-                      href={member.appointmentUrl}
+                      href={TEAM_DIETITIAN.appointmentUrl}
                     />
                   </div>
-                </TeamMemberCard>
-              </AnimateOnScroll>
-            ))}
+                ) : null}
+              </TeamMemberCard>
+            </AnimateOnScroll>
           </div>
 
           <AnimateOnScroll delay={100}>

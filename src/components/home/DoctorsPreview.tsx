@@ -1,16 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
-import { CONSULTING_DOCTORS, SPORT_DOCTOR } from "@/lib/constants";
+import {
+  CONSULTING_DOCTORS,
+  SPORT_DOCTOR,
+  TEAM_SECRETARY,
+  resolveTeamDescription,
+} from "@/lib/constants";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function DoctorsPreview() {
+  const justineBio = resolveTeamDescription(TEAM_SECRETARY.description);
+  const justineImage = TEAM_SECRETARY.imageThumb ?? TEAM_SECRETARY.image;
+
   return (
     <section className="py-20 md:py-28">
       <div className="container-narrow">
         <SectionHeading
           title="Ons team"
-          subtitle="Twee vaste huisartsen en een sportarts. U kiest bij wie u een afspraak maakt — alle artsen kunnen uw dossier raadplegen."
+          subtitle="Twee vaste huisartsen, een sportarts en onthaal & secretariaat. U kiest bij wie u een afspraak maakt — alle artsen kunnen uw dossier raadplegen."
         />
 
         <div className="grid gap-6 md:grid-cols-3">
@@ -76,6 +84,34 @@ export function DoctorsPreview() {
             </article>
           </AnimateOnScroll>
         </div>
+
+        {justineImage ? (
+          <AnimateOnScroll delay={280}>
+            <div className="mx-auto mt-6 grid max-w-sm gap-6 md:max-w-none md:grid-cols-3">
+              <article className="card-premium group text-center md:col-start-2">
+                <div className="relative mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full ring-2 ring-medical-100 transition-transform group-hover:scale-105">
+                  <Image
+                    src={justineImage}
+                    alt={TEAM_SECRETARY.imageAlt ?? TEAM_SECRETARY.name}
+                    fill
+                    quality={95}
+                    className="object-cover object-top"
+                    sizes="160px"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-medical-900">
+                  {TEAM_SECRETARY.name}
+                </h3>
+                <p className="mt-1 text-sm font-medium text-gold-500">
+                  {TEAM_SECRETARY.role}
+                </p>
+                {justineBio ? (
+                  <p className="mt-3 text-sm text-medical-600">{justineBio}</p>
+                ) : null}
+              </article>
+            </div>
+          </AnimateOnScroll>
+        ) : null}
 
         <div className="mt-10 text-center">
           <Link
